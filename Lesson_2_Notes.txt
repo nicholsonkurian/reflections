@@ -1,0 +1,23 @@
+git init  --- initialize repository , also creates hidden file .git
+git status   --- to get reposity status
+
+
+Staged area before commit
+git add filename lesson1notes
+git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Lesson1DiffNotes.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Lesson_2_Notes.txt
+
+
+git commit -m "Lesson 1 Notes Commit message"
