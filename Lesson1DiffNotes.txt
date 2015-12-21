@@ -1,0 +1,42 @@
+diff used to find difference in two different files at line level
+- lines for old code
++ lines of new code
+
+Lesser metadata from file.
+
+different way to finding them
+
+
+git commit
+Choosing when to commit is a judgment call, and it's not always cut-and-dried. 
+When choosing whether to commit, just keep in mind that each commit should have one clear, 
+logical purpose, and you should never do too much work without committing.
+
+git add
+git status
+git commit
+git diff   id1 id2         ---on commit id is also possible
+git log -stat gives statistics.
+ git clone  link
+git config --global color.ui auto
+
+git checkout commitID
+cd ~  -- to get home directory
+Console prompt Configuration files.
+git-prompt.sh
+git-completion.bash
+.bash_profile
+
+git config --global core.editor "'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w"
+git config --global push.default upstream
+
+pappu-pakia  latest commit id fa4c6bade4970c282b3870ad16f1bde8164663a9
+git checkout fa4c6bade4970c282b3870ad16f1bde8164663a9
+
+
+git config --global merge.conflictstyle diff3
+Lesson 2
+-------------------
+To initialize a git repository
+git init
+git status
