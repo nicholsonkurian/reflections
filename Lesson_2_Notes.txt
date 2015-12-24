@@ -21,3 +21,185 @@ Untracked files:
 
 
 git commit -m "Lesson 1 Notes Commit message"
+git add lesson2notes
+git commit -m "Add Lesson2 Notes as well" 
+
+
+git diff   -- to find difference between working directory and staging area
+git diff --staged  to find difference between staging area and most recent commit
+git reset --hard  reset any changes in working directory or staging area.
+git checkout master   this gets the master branch
+
+How can you use your staging area to make sure you have one commit per locical change?
+All files related to the logical change is in the staging area using git diff --staged
+
+git branch    list out all branches in the repository
+git branch branch_name
+git checkout branch_name
+
+
+What are some situations when branches would be helpful in keeping your history organized? How wouod branches help?
+It is useful when you are experimenting with a new feature in the code as you would like to try them out without effecting the master branch of the code.
+This would also be helpful if the module itself is separte from other implementions and would add as a menu item to the master branch.
+
+
+git log --graph
+git log --graph --oneline
+
+* 6f99092 Modified game.js line 424 to add delay to frame by 10
+* 3884eab Add color
+* 3e42136 now using requestAnimationFrame
+* 4035769 frame interval was set wrong after game was paused
+* 25ede83 a couple missing ends with the ipad version
+* df03538 I can't spell 'screen' apparently :)
+| * 354dfdd Make ships able to spawn on coins
+| * 0c6daf1 Make it possible to collect coins
+| * a3c0ae4 Create helper functions
+| * 656b02e First pass at adding coins
+|/
+* b0678b1 Revert controls
+* f19cb1b Fix typo in space
+* 75928a9 Use space for movement and enter for shooting
+* ac83b72 mostly finished ipad version
+* 7ca4826 trying to get div touch controls to work
+* 3cb406e first pass at ipad controls
+* fe7993e now capturing down key so people don't accidently scroll the page
+* 343935f added license
+........
+.........
+..............
+
+
+How do the diagrams help you visualize the branch structure?
+Diagrams give a complete picture of the code path and where it branches out or in a headless state if checkout is done at the previous commits;
+
+git checkout -b branch_name  -- creates a new branch and checkes them out 
+get on master branch
+git merge master coins
+git diff for comparing with parent becomes complicated as git log shows them in timestamp sequence.
+So when merged the commits will be mixed with other branches.
+So use the following command to get the difference in selected commit and its parent
+git show commit_id
+
+git branch -d coins
+
+What is the result of merging two branches together?
+why do we represent it in the diagram that way we do?
+Codes are merged together without losing any changes to either code.
+We represent them in the diagram because they follow two different path and later merge at a future point where both the master
+and branch have valid changes.
+
+while merging two brances make sure you first checkout the branch in which you want to merge the changes.
+then give the merge command.
+
+git checkout easy-mode
+git merge master easy-mode
+after resolving merge conflict in file
+its saves the file in both  branches.
+and then we have to add and to staged area and then commit to complete the merge.
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+easy faster merges. Gives detailed conflict areas.
+
+manual merging are tedious and time consuming.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2..0..656b02e First pass at adding coins
+|/
+* b0678b1 Revert controls
+* f19cb1b Fix typo in space
+* 75928a9 Use space for movement and enter for shooting
+* ac83b72 mostly finished ipad version
+* 7ca4826 trying to get div touch controls to work
+* 3cb406e first pass at ipad controls
+* fe7993e now capturing down key so people don't accidently scroll the page
+* 343935f added license
+* 80f3bc7 increased canvas size
+* 7dc3de0 made the framerate counter dumb but more accurate
+* f077ea3 added pointInPolygon method for moz
+* 5cb7bed added reverseTransform method
+* a53b00a trying to get ff collision detection working
+* 1e47136 matrix really only needs to be a 2x3
+* 186453f small changes
+* c0b670e you get 200 Quatloos for shooting a big flying saucer
+* c808f10 bigalien now crosses and disappears
+* c588345 move lives out of Ship
+* 4bb6bf0 whole lot of refactoring
+* 5a54ab9 got the flying saucer working
+* f421d99 made ship rotate faster
+* 649ccbb collisions now work on dupes
+* 1c3ea2d no longer a border, duping rendering on the edges
+* 18b3f7c alien is shootin' and dodgin'
+* e2ecf58 start of alien invaders
+* 79aafad sound FX!
+* d900856 exhaust was showing on the extradudes
+* 3c6ade8 added score and extra dude display
+* c09083d added isClear method to Sprite, refactored
+* b83411e now have full game states, complete with levels
+* aa90200 added game states, start/spawn, pause display
+* 4be87fb make the framerate less jittery
+* 4e45b25 now we have a font
+* 380230e added collidesWith to the objects
+* fe11dbc now using isPointInPath
+* 48d2f98 fixed short lived bullet bug
+* 9b0222c using grid to limit collision calculations
+* 050fedd added grid, grid display, play/pause, die()
+* f734752 doing things a little more OO
+* ded14f6 moved framerate inside canvas
+* 948bf2f push the roids out a bit when fragmenting
+* 3a7623a fix border bug
+* 55cbfba added explosions and the reap flag
+* e0d680c moved stuff around
+* 05dcf62 reimplemented using canvas alone
+* 6ab3841 fixed bullets
+* ed98201 changed the asteroid's scale and division factor
+* 73af53a executing moves with a delta
+* 2cbed11 added ship death, break apart asteroids
+* 422b6ff collisions!
+* 4ebf2fd asteroids
+* 292faae added bullets
+* daebb75 added bullets
+* fc72f92 Add README
+* 505f221 initial add
+
+
